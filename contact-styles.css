@@ -50,7 +50,7 @@ align-items: center;
 background: linear-gradient(90deg, #cc0000, #008000);
 color: white;
 padding: 15px 20px;
-font-size: 40px;
+font-size: 20px;
 font-weight: 600;
 }
 
@@ -97,7 +97,7 @@ cursor: pointer;
 
 @media (max-width: 768px) {
 header {
-font-size: 6vw;
+font-size: 3vw;
 }
 
 nav {
