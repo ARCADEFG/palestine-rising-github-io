@@ -8,152 +8,109 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact-styles.css">
 </head>
 <body>
-    <header>
-    <h1>Palestine Rising</h1>
-    <div class="logo">
-        <img src="logo.png" alt="logo" width="100" height="100">
-    </div>
-    <button class="menu-toggle">☰</button>
-</header>
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="about-us-index.html">About</a>
-        <a href="news-index.html">News</a>
-        <a href="events-index.html">Event</a>
-        <a href="contact-us-index.html">Contact Us</a>
-        <a href="media-index.html">Media</a>
-    </div>
-    <div id="news-ticker">
-        <span class="ticker-content">Breaking News: Join our upcoming protest this Sunday! | Donate now to support relief efforts.</span>
-    </div>
-    <div class="container">
-        <h2>Make a Difference</h2>
-        <p>Join us in supporting humanitarian efforts and advocating for peace in Palestine.</p><br>
-
-        <h3>Support Our Cause</h3>
-        <p>Your donation helps provide essential aid to those in need.</p>
-        <label>Donation Amount ($)</label>
-        <input type="number" value="50" min="1">
-        <p>100 Meals Provided | 25 Medical Supplies | 5 Children Supported</p>
-        <button>Donate Now</button><br>
-        <br>
-        <h3>Volunteer Opportunities</h3>
-        <p>Join our movement and help make a difference.</p>
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required><br>
-            <br>
-            <label>Select Your Area of Interest:</label>
-
-            <div class="checkbox-group">
-                <label><input type="checkbox"> Community Outreach</label>
-                <label><input type="checkbox"> Event Support</label>
-                <label><input type="checkbox"> Digital Advocacy</label>
-                <label><input type="checkbox"> Educational Programs</label>
-            </div>
-            <br>
-            <textarea placeholder="Tell us about your interests and availability"></textarea>
-            <button type="submit">Submit Application</button>
-        </form>
-        <br>
-        <h3>Contact Us</h3>
-        <p>Email: info@palestinerising.org</p>
-        <p>Phone: +1 (555) 123-4567</p>
-        <br>
-        <br>
-        <section class="newsletter">
-            <h2>Sign up for Palestine Rising</h2>
-            <h3><b>Weekly Newsletter</b></h3>
-            <p>Subscribe for updates</p>
-
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </section>
-        <br>
-        <h3>Location</h3>
-        <p>63 Jln Uthant 55000 Kuala Lumpur Federal Territory of Kuala Lumpur</p>
-        <iframe width="100"
-                height="300"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.936315504497!2d101.731648!3d3.1551707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37b48ebcb1c7%3A0x312ca2efa110446d!2sEmbassy%20Of%20The%20State%20Of%20Palestine!5e0!3m2!1sen!2smy!4v1616581234567!5m2!1sen!2smy"
-                allowfullscreen>
-        </iframe>
-    </div>
-    <footer>
-        <!-- Left Side: Logo and Footer Text -->
-        <div class="footer-section">
+    <div class="wrapper">
+        <header>
+            <h1>Palestine Rising</h1>
             <div class="logo">
                 <img src="logo.png" alt="logo" width="100" height="100">
             </div>
-            <div class="footer-text">
-                <p>© 2025 Palestine Rising</p>
-                <p>All rights reserved.</p>
-            </div>
+            <button class="menu-toggle">☰</button>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about-us-index.html">About</a>
+            <a href="news-index.html">News</a>
+            <a href="events-index.html">Event</a>
+            <a href="contact-us-index.html">Contact Us</a>
+            <a href="media-index.html">Media</a>
+        </nav>
+        <div id="news-ticker">
+            <span class="ticker-content">Breaking News: Join our upcoming protest this Sunday! | Donate now to support relief efforts.</span>
         </div>
+        <div class="container">
+            <h2>Make a Difference</h2>
+            <p>Join us in supporting humanitarian efforts and advocating for peace in Palestine.</p><br>
 
-        <!-- Center: Message -->
-        <div class="footer-center">Empowering the Voices of Palestine</div>
+            <h3>Support Our Cause</h3>
+            <p>Your donation helps provide essential aid to those in need.</p>
+            <label>Donation Amount ($)</label>
+            <input type="number" value="50" min="1">
+            <p>100 Meals Provided | 25 Medical Supplies | 5 Children Supported</p>
+            <button>Donate Now</button><br>
+            <br>
+            <h3>Volunteer Opportunities</h3>
+            <p>Join our movement and help make a difference.</p>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required><br>
+                <br>
+                <label>Select Your Area of Interest:</label>
 
-        <!-- Right Side: Social Media -->
-        <div class="footer-right">
-            <p>Follow us on social media:</p>
-            <div class="footer-icons">
-                <a href="#" class="fab fa-facebook"></a>
-                <a href="#" class="fab fa-x-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Community Outreach</label>
+                    <label><input type="checkbox"> Event Support</label>
+                    <label><input type="checkbox"> Digital Advocacy</label>
+                    <label><input type="checkbox"> Educational Programs</label>
+                </div>
+                <br>
+                <textarea placeholder="Tell us about your interests and availability"></textarea>
+                <button type="submit">Submit Application</button>
+            </form>
+            <br>
+            <h3>Contact Us</h3>
+            <p>Email: info@palestinerising.org</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <br>
+            <br>
+            <section class="newsletter">
+                <h2>Sign up for Palestine Rising</h2>
+                <h3><b>Weekly Newsletter</b></h3>
+                <p>Subscribe for updates</p>
+
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </section>
+            <br>
+            <h3>Location</h3>
+            <p>63 Jln Uthant 55000 Kuala Lumpur Federal Territory of Kuala Lumpur</p>
+            <iframe width="100"
+                    height="300"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3180.936315504497!2d101.731648!3d3.1551707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc37b48ebcb1c7%3A0x312ca2efa110446d!2sEmbassy%20Of%20The%20State%20Of%20Palestine!5e0!3m2!1sen!2smy!4v1616581234567!5m2!1sen!2smy"
+                    allowfullscreen>
+            </iframe>
+        </div>
+        <footer>
+            <!-- Left Side: Logo and Footer Text -->
+            <div class="footer-section">
+                <div class="logo">
+                    <img src="logo.png" alt="logo" width="100" height="100">
+                </div>
+                <div class="footer-text">
+                    <p>© 2025 Palestine Rising</p>
+                    <p>All rights reserved.</p>
+                </div>
             </div>
 
-        </div>
-    </footer>
-    
-    <script>
-        function validateForm() {
-            let name = document.getElementById('name').value;
-            let email = document.getElementById('email').value;
-            let message = document.getElementById('message').value;
-            let subject = document.getElementById('subject').value;
-            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            let terms = document.getElementById('terms').checked;
-            let contactMethod = document.querySelector('input[name="contact-method"]:checked');
+            <!-- Center: Message -->
+            <div class="footer-center">Empowering the Voices of Palestine</div>
 
-            if (name.trim() === "") {
-                alert("Please enter your name.");
-                return false;
-            }
-            if (!emailPattern.test(email)) {
-                alert("Please enter a valid email address.");
-                return false;
-            }
-            if (subject === "") {
-                alert("Please select a subject.");
-                return false;
-            }
-            if (!contactMethod) {
-                alert("Please select a preferred contact method.");
-                return false;
-            }
-            if (!terms) {
-                alert("You must agree to the terms and conditions.");
-                return false;
-            }
-            if (message.trim() === "") {
-                alert("Please enter your message.");
-                return false;
-            }
-            return true;
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("nav");
+            <!-- Right Side: Social Media -->
+            <div class="footer-right">
+                <p>Follow us on social media:</p>
+                <div class="footer-icons">
+                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="#" class="fab fa-x-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
 
-    menuToggle.addEventListener("click", function () {
-        nav.classList.toggle("nav-active");
-    });
-});
-    </script>
-    
+            </div>
+        </footer>
+        <script src="contact-script.js"></script>
+    </div>
 </body>
 </html>
