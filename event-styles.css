@@ -14,46 +14,90 @@ html, body {
     margin: 0;
 }
 
+.wrapper {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(90deg, #cc0000, #008000);
-    color: white;
-    padding: 20px;
-    font-size: 40px;
-    font-weight: 600;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: linear-gradient(90deg, #cc0000, #008000);
+color: white;
+padding: 15px 20px;
+font-size: 40px;
+font-weight: 600;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #166534;
-    margin-left: auto;
+font-size: 1.2rem;
+font-weight: bold;
+color: #166534;
+margin-left: auto;
 }
+
 /* Navigation */
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: #008000;
-    padding: 15px;
+display: flex;
+justify-content: center;
+background-color: #008000;
+padding: 10px;
 }
 
-    nav a {
-        color: white;
-        margin: 0 20px;
-        text-decoration: none;
-        font-size: 18px;
-        transition: color 0.3s;
-    }
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-size: 16px;
+transition: color 0.3s;
+}
 
-        nav a:hover {
-            color: #ffcc00;
-        }
+nav a:hover {
+    color: #ffcc00;
+}
 
-        nav a:focus {
-            outline: 2px solid #ffcc00;
-        }
+nav a:focus {
+    outline: 2px solid #ffcc00;
+}
+
+/* Responsive Navigation */
+.menu-toggle {
+display: none;
+font-size: 24px;
+color: white;
+background: none;
+border: none;
+cursor: pointer;
+}
+
+@media (max-width: 768px) {
+header {
+font-size: 6vw;
+}
+
+nav {
+flex-direction: column;
+align-items: center;
+display: none; /* Hide menu by default */
+width: 100%;
+}
+
+nav a {
+    display: block;
+    padding: 10px 0;
+}
+
+.menu-toggle {
+display: block;
+}
+
+.nav-active {
+display: flex;
+}
+}
 
 .content-wrapper {
     display: flex;
