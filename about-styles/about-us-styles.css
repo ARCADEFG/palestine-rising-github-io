@@ -14,42 +14,63 @@ html, body {
     margin: 0;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, #cc0000, #008000);
     color: white;
-    padding: 20px;
+    padding: 15px 20px;
     font-size: 40px;
     font-weight: 600;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #166534;
     margin-left: auto;
 }
 
-.nav {
+/* Navigation */
+nav {
     display: flex;
     justify-content: center;
     background-color: #008000;
-    padding: 15px;
-    animation: fadeIn 1s ease-in-out;
+    padding: 10px;
 }
 
-.nav a {
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        nav a:focus {
+            outline: 2px solid #ffcc00;
+        }
+
+/* Responsive Navigation */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
     color: white;
-    margin: 0 20px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.nav a:hover {
-    color: #ffcc00;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /* Content Container */
@@ -75,10 +96,10 @@ header {
     animation: fadeInUp 1s ease-in-out;
 }
 
-    .section:hover {
-        transform: scale(1.02);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    }
+.section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
 
 /* Headings */
 h2 {
@@ -98,11 +119,11 @@ h2 {
     gap: 20px;
 }
 
-    .goals-team .section,
-    .values-impact .section {
-        flex: 1;
-        min-width: 280px;
-    }
+.goals-team .section,
+.values-impact .section {
+    flex: 1;
+    min-width: 280px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -110,18 +131,48 @@ h2 {
     .values-impact {
         flex-direction: column;
     }
+
+    header {
+        font-size: 6vw;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide menu by default */
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
 }
 
 footer {
-    position: relative; /* Changed from fixed to relative */
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: #212325;
     color: white;
-    padding: 20px;
+    padding: 15px 20px; /* Adjusted padding */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
@@ -131,18 +182,23 @@ footer {
 .footer-section {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
 }
 
-    .footer-section .logo img {
-        border-radius: 50%;
-        background-color: #383737;
-        padding: 10px;
-        display: block;
-    }
+.footer-section .logo img {
+    border-radius: 50%;
+    background-color: #383737;
+    padding: 10px;
+    display: block;
+    width: 50px; /* Ensure proper sizing */
+    height: 50px;
+    object-fit: cover; /* Ensure the image doesn't get distorted */
+}
 
 .footer-text {
-    text-align: left;
+    text-align: center;
+    font-size: 14px;
 }
 
 /* Footer Center */
@@ -150,6 +206,7 @@ footer {
     flex: 1;
     text-align: center;
     font-weight: bold;
+    font-size: 14px;
 }
 
 /* Social Media Section */
@@ -157,73 +214,73 @@ footer {
     text-align: right;
 }
 
-    .footer-right p {
-        margin-bottom: 5px;
-    }
+.footer-right p {
+    margin-bottom: 5px;
+}
 
 /* Footer Social Media Icons */
 .footer-icons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: flex-end;
 }
 
-    .footer-icons a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        border-radius: 50%;
-        text-decoration: none;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
+.footer-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-        /* Facebook */
-        .footer-icons a.fa-facebook {
-            background-color: #3b5998;
-            color: white;
-        }
+/* Facebook */
+.footer-icons a.fa-facebook {
+    background-color: #3b5998;
+    color: white;
+}
 
-            .footer-icons a.fa-facebook:hover {
-                background-color: #2d4373;
-            }
+.footer-icons a.fa-facebook:hover {
+    background-color: #2d4373;
+}
 
-        /* X (Twitter) */
-        .footer-icons a.fa-x-twitter {
-            background-color: black;
-            color: white;
-            font-size: 22px;
-            font-weight: bold;
-        }
+/* X (Twitter) */
+.footer-icons a.fa-x-twitter {
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
 
-            .footer-icons a.fa-x-twitter:hover {
-                background-color: #222;
-            }
+.footer-icons a.fa-x-twitter:hover {
+    background-color: #222;
+}
 
-        /* Instagram */
-        .footer-icons a.fa-instagram {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            color: white;
-        }
+/* Instagram */
+.footer-icons a.fa-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
 
-            .footer-icons a.fa-instagram:hover {
-                filter: brightness(1.2);
-            }
+.footer-icons a.fa-instagram:hover {
+    filter: brightness(1.2);
+}
 
-        /* Hover Effect */
-        .footer-icons a:hover {
-            transform: scale(1.2);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-        }
+/* Hover Effect */
+.footer-icons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
 
-        /* Click Effect */
-        .footer-icons a:active {
-            transform: scale(1);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+/* Click Effect */
+.footer-icons a:active {
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
@@ -256,12 +313,12 @@ footer {
         text-align: center;
     }
 
-    .nav {
+    nav {
         flex-direction: column;
         padding: 10px;
     }
 
-    .nav a {
+    nav a {
         margin: 10px 0;
     }
 
@@ -300,12 +357,12 @@ footer {
         text-align: center;
     }
 
-    .nav {
+    nav {
         flex-direction: column;
         padding: 10px;
     }
 
-    .nav a {
+    nav a {
         margin: 10px 0;
     }
 
