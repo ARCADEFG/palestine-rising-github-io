@@ -220,7 +220,7 @@ a[href="https://www.theguardian.com/us-news/2025/feb/13/rabbis-ad-trump-gaza-pla
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
 }
 
     .categories h2, .newsletter h2 {
